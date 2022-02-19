@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='x.jpg') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+
+        {% if title %}
+            <title>{{ title }}</title>
+        {% else %}
+            <title>No Title</title>
+        {% endif %}
+    </head>
+
+    <body>
+        {% block content %}
+        {% endblock %}
+    </body>
+</html>

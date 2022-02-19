@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h1>PS Output</h1>
+    <button onClick="window.location.reload();">Refresh Page</button>
+    <table>
+        <tr>
+            <th>PID</th>
+            <th>Name</th>
+        </tr>
+        {% for proc in ps_data %}
+        <tr>
+            <td>{{proc.pid}}</td>
+            <td>{{proc.name}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock content %}

@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h1>Sys Info:</h1>
+    <p>OS: {{ sys_data.OS }} | Release: {{ sys_data.Release }} | Version: {{ sys_data.Version }}</p>
+    <p>CPU Cores: {{ sys_data.Cores }} | Threads: {{ sys_data.Threads }}</p>
+    <p>Memory: {{ sys_data.Memory }} GB</p>
+    <p>Uptime: {{ sys_data.UptimeHr }} Hours, {{ sys_data.UptimeMin }} Minutes, {{ sys_data.UptimeSec }} Seconds</p>
+    <p>Users: {{ sys_data.Users }}</p>
+{% endblock content %}
